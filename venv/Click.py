@@ -17,10 +17,19 @@ def clicker():
 
 keyboard.add_hotkey('Ctrl + Q', clicker) # Комбинации клавиш для активации 'кликера'
 
+i = 0
 while True:
-    if isClicking:
-        mouse.double_click(button='left') # Выбор кнопки мышки
-        time.sleep(0.01) # Задержка после каждого нажатия
+    if i < 990:
+        i += 1
+        if isClicking:
+            mouse.double_click(button='left') # Выбор кнопки мышки
+            time.sleep(0.05) # Задержка после каждого нажатия
+    else:
+        time.sleep(600) # Для передышки после определенного количество нажатий
+        i = 0
+
+
+
 
 
 
